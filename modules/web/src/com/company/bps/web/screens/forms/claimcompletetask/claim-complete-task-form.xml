@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.bps.web.screens.forms.claimcompletetask">
+    <layout>
+        <hbox spacing="true">
+            <button id="claimTaskBtn" caption="msg://claimTask"/>
+            <button id="completeTaskBtn" caption="msg://completeTask"/>
+        </hbox>
+    </layout>
+</window>

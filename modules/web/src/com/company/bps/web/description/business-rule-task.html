@@ -1,0 +1,15 @@
+<p>The sample demonstrates how to use business rule tasks in the BPMN process. The decision table evaluates the discount
+    by the order amount. To view the decision table use the <b>BProc - Decision Tables</b> screen. There is a <code>order-discount-decision-table</code>
+    there.</p>
+
+<h2>How to use the sample</h2>
+
+<p>
+    Create the <code>Order</code> entity using the <b>Application - Orders</b> screen. Specify the order amount.
+</p>
+<p>
+    Click the <b>Start process</b> button. Select the order and the approver. After the process is started the business
+    rule task will be executed, and the discount value will be put to the <code>discount</code> process variable. You
+    may see the value of the discount process variable either on the user task form (the task is assigned to the
+    approver) or in the process instance editor (<b>BProc - Process instances</b> screen)
+</p>

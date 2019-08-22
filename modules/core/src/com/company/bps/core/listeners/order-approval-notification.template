@@ -1,0 +1,3 @@
+Hello ${user.name}!
+The task "${taskData.name}" has been assigned to you.
+The order number is "${order.number}".

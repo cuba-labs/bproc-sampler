@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.bps.web.screens.forms.simpletaskform">
+    <dialogMode width="400px"
+                resizable="true"/>
+    <layout spacing="true" width="100%">
+        <form width="100%">
+            <column width="100%">
+                <textField id="orderNo" caption="msg://orderNo"/>
+                <dateField id="approvalDateField" caption="msg://approvalDate"/>
+                <textArea id="rejectionReasonField" caption="msg://rejectionReason" rows="3"/>
+            </column>
+        </form>
+        <hbox spacing="true">
+            <button id="approveBtn" caption="msg://approve" icon="font-icon:CHECK"/>
+            <button id="rejectBtn" caption="msg://reject" icon="font-icon:BAN"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.bps.web.screens.sampler">
+    <data>
+        <collection id="sampleItemsDc" class="com.company.bps.entity.SampleItem"/>
+        <instance id="sampleItemDc" class="com.company.bps.entity.SampleItem">
+            <collection id="sampleFilesDc" property="files"/>
+        </instance>
+    </data>
+    <layout spacing="true">
+        <hbox height="100%" spacing="true" width="100%" expand="sampleItemPanel">
+            <table id="sampleItemsTable" dataContainer="sampleItemsDc" height="100%" width="300px"
+                   sortable="false">
+                <columns>
+                    <column id="title" caption="msg://sampleName"/>
+                </columns>
+            </table>
+            <vbox id="sampleItemPanel" expand="sampleItemTabSheet" height="100%" spacing="true">
+                <label id="titleLabel" dataContainer="sampleItemDc" property="title" stylename="h1"/>
+                <hbox spacing="true">
+                    <button id="startProcessBtn" caption="msg://startProcess" icon="font-icon:PLAY" width="180px"/>
+                    <button id="openModelerBtn" caption="msg://openInModeler" icon="font-icon:SEARCH" width="180px"/>
+                </hbox>
+                <tabSheet id="sampleItemTabSheet" width="100%"/>
+            </vbox>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="bps_Order" name="order-browse" extends="_local">
+        <property name="manager" view="_minimal"/>
+    </view>
+    <view entity="bps_Order" name="order-edit" extends="_local">
+        <property name="manager" view="_minimal"/>
+    </view>
+</views>

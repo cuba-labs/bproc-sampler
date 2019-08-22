@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:flowable="http://flowable.org/bpmn"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:bproc="http://schemas.haulmont.com/bproc/bpmn"
+             targetNamespace="http://www.flowable.org/processdef">
+  <process id="task-claiming-form" name="Task claiming form" isExecutable="true" flowable:candidateStarterGroups="all-users" bproc:candidateStarterGroupsValue="51382ce2-2d3b-7c1e-adc0-8d51c0d3e959">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <bproc:formData type="no-form" />
+      </extensionElements>
+      <outgoing>SequenceFlow_0tc5uch</outgoing>
+    </startEvent>
+    <sequenceFlow id="SequenceFlow_0tc5uch" sourceRef="startEvent1" targetRef="Task_1bhphw4" />
+    <userTask id="Task_1bhphw4" name="Group task 1" flowable:candidateGroups="all-users" bproc:candidateGroupsValue="all-users">
+      <extensionElements>
+        <bproc:formData type="cuba-screen" openMode="DIALOG" screenId="bps_ClaimCompleteTaskForm" />
+      </extensionElements>
+      <incoming>SequenceFlow_0tc5uch</incoming>
+      <outgoing>SequenceFlow_01m46u0</outgoing>
+    </userTask>
+    <endEvent id="EndEvent_02x3x8p">
+      <incoming>SequenceFlow_01m46u0</incoming>
+    </endEvent>
+    <sequenceFlow id="SequenceFlow_01m46u0" sourceRef="Task_1bhphw4" targetRef="EndEvent_02x3x8p" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="task-claiming-form">
+      <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+        <omgdc:Bounds x="150" y="150" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0tc5uch_di" bpmnElement="SequenceFlow_0tc5uch">
+        <omgdi:waypoint x="180" y="165" />
+        <omgdi:waypoint x="230" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_08u72a9_di" bpmnElement="Task_1bhphw4">
+        <omgdc:Bounds x="230" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_02x3x8p_di" bpmnElement="EndEvent_02x3x8p">
+        <omgdc:Bounds x="380" y="147" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_01m46u0_di" bpmnElement="SequenceFlow_01m46u0">
+        <omgdi:waypoint x="330" y="165" />
+        <omgdi:waypoint x="380" y="165" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

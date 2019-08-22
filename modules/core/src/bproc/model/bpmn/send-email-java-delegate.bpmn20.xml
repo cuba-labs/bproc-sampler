@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:bproc="http://schemas.haulmont.com/bproc/bpmn" targetNamespace="http://www.flowable.org/processdef">
+  <process id="send-email-java-delegate" name="Send email JavaDelegate" isExecutable="true" flowable:candidateStarterGroups="all-users" bproc:candidateStarterGroupsValue="51382ce2-2d3b-7c1e-adc0-8d51c0d3e959">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <bproc:formData type="input-dialog" openMode="DIALOG">
+          <bproc:formFields>
+            <bproc:formField id="manager" caption="Manager" type="user" editable="true" required="false">
+              <bproc:formFieldProperty name="uiComponent" value="lookupField" />
+            </bproc:formField>
+          </bproc:formFields>
+        </bproc:formData>
+      </extensionElements>
+      <outgoing>SequenceFlow_05kf3ib</outgoing>
+    </startEvent>
+    <sequenceFlow id="SequenceFlow_05kf3ib" sourceRef="startEvent1" targetRef="Task_0yt4p5m" />
+    <serviceTask id="Task_0yt4p5m" name="Send email task" flowable:class="com.company.bps.core.delegate.SendEmailJavaDelegate" bproc:taskType="javaDelegateClass">
+      <extensionElements>
+        <flowable:field name="addressee">
+          <flowable:expression>${manager}</flowable:expression>
+        </flowable:field>
+        <flowable:field name="emailSubject">
+          <flowable:string>Hello!</flowable:string>
+        </flowable:field>
+        <flowable:field name="emailBody">
+          <flowable:string>How are you?</flowable:string>
+        </flowable:field>
+      </extensionElements>
+      <incoming>SequenceFlow_05kf3ib</incoming>
+      <outgoing>SequenceFlow_0f3nlj4</outgoing>
+    </serviceTask>
+    <endEvent id="EndEvent_16cko2s">
+      <incoming>SequenceFlow_0f3nlj4</incoming>
+    </endEvent>
+    <sequenceFlow id="SequenceFlow_0f3nlj4" sourceRef="Task_0yt4p5m" targetRef="EndEvent_16cko2s" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="send-email-java-delegate">
+      <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+        <omgdc:Bounds x="150" y="150" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_05kf3ib_di" bpmnElement="SequenceFlow_05kf3ib">
+        <omgdi:waypoint x="180" y="165" />
+        <omgdi:waypoint x="230" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1d8bqaa_di" bpmnElement="Task_0yt4p5m">
+        <omgdc:Bounds x="230" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_16cko2s_di" bpmnElement="EndEvent_16cko2s">
+        <omgdc:Bounds x="380" y="147" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0f3nlj4_di" bpmnElement="SequenceFlow_0f3nlj4">
+        <omgdi:waypoint x="330" y="165" />
+        <omgdi:waypoint x="380" y="165" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

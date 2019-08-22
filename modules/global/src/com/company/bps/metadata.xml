@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
+
+    <metadata-model root-package="com.company.bps" namespace="bps">
+        <class>com.company.bps.entity.SampleItem</class>
+        <class>com.company.bps.entity.SampleFile</class>
+        <class>com.company.bps.entity.DocumentationLink</class>
+    </metadata-model>
+
+</metadata>

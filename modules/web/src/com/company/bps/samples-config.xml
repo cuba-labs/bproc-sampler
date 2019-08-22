@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<samples-config>
+
+    <sample-item
+            title="Input dialog form"
+            processDefinitionKey="input-dialog-form"
+            descriptionFile="com/company/bps/web/description/input-dialog-form.html">
+        <documentationLinks>
+            <documentationLink urlSuffix="#input-dialog-process-form" caption="Input Dialog Process Form"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="CUBA screen form"
+            processDefinitionKey="cuba-screen-form"
+            descriptionFile="com/company/bps/web/description/cuba-screen-form.html">
+        <files>
+            <file path="com/company/bps/web/screens/forms/simplestartform/SimpleStartForm.java"/>
+            <file path="com/company/bps/web/screens/forms/simplestartform/simple-start-form.xml"/>
+            <file path="com/company/bps/web/screens/forms/simpletaskform/SimpleTaskForm.java"/>
+            <file path="com/company/bps/web/screens/forms/simpletaskform/simple-task-form.xml"/>
+        </files>
+        <documentationLinks>
+            <documentationLink urlSuffix="#cuba-screen-process-form" caption="CUBA Screen Process Form"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="Entity editor form"
+            processDefinitionKey="entity-editor-form"
+
+            descriptionFile="com/company/bps/web/description/entity-editor-form.html">
+        <files>
+            <file path="com/company/bps/web/screens/forms/orderstart/OrderEditStartForm.java"/>
+            <file path="com/company/bps/web/screens/forms/orderstart/order-edit-start-form.xml"/>
+            <file path="com/company/bps/web/screens/forms/ordertask/OrderEditTaskForm.java"/>
+            <file path="com/company/bps/web/screens/forms/ordertask/order-edit-task-form.xml"/>
+        </files>
+        <documentationLinks>
+            <documentationLink urlSuffix="#standard-editor-process-form-example" caption="StandardEditor Process Form Example"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="Task claiming form"
+            processDefinitionKey="task-claiming-form"
+
+            descriptionFile="com/company/bps/web/description/task-claiming-form.html">
+        <files>
+            <file path="com/company/bps/web/screens/forms/claimcompletetask/ClaimCompleteTaskForm.java"/>
+            <file path="com/company/bps/web/screens/forms/claimcompletetask/claim-complete-task-form.xml"/>
+        </files>
+    </sample-item>
+
+    <sample-item
+            title="Failed job"
+            processDefinitionKey="failed-job"
+            descriptionFile="com/company/bps/web/description/failed-job.html">
+        <files>
+            <file path="com/company/bps/service/FailedJobDemoServiceBean.java"/>
+        </files>
+        <documentationLinks>
+            <documentationLink urlSuffix="#process-instances-screen" caption="Process Instances Screen"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="UserProvider task assignment"
+            processDefinitionKey="user-provider-task-assignment"
+            descriptionFile="com/company/bps/web/description/user-provider-task-assignment.html">
+        <files>
+            <file path="com/company/bps/core/provider/ManagerUserProvider.java"/>
+        </files>
+        <documentationLinks>
+            <documentationLink urlSuffix="##single-user-assignment" caption="Single User Assignment"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="UserTaskAssignedEvent"
+            processDefinitionKey="user-task-assigned-event"
+            descriptionFile="com/company/bps/web/description/user-task-assigned-event.html">
+        <files>
+            <file path="com/company/bps/core/listeners/NotificationsSender.java"/>
+        </files>
+        <documentationLinks>
+            <documentationLink urlSuffix="#event-listener" caption="Event Listeners"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="Send email JavaDelegate"
+            processDefinitionKey="send-email-java-delegate"
+            descriptionFile="com/company/bps/web/description/send-email-java-delegate.html">
+        <files>
+            <file path="com/company/bps/core/delegate/SendEmailJavaDelegate.java"/>
+        </files>
+        <documentationLinks>
+            <documentationLink urlSuffix="#java-delegate-service-task" caption="Java Delegate Service Task"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="Lanes task assignment"
+            processDefinitionKey="lanes-task-assignment"
+            descriptionFile="com/company/bps/web/description/lanes-task-assignment.html">
+        <documentationLinks>
+            <documentationLink urlSuffix="#pools-and-lanes" caption="Pools and Lanes"/>
+        </documentationLinks>
+    </sample-item>
+
+    <sample-item
+            title="Business rule task"
+            processDefinitionKey="business-rule-task"
+            descriptionFile="com/company/bps/web/description/business-rule-task.html">
+        <documentationLinks>
+            <documentationLink urlSuffix="#dmn" caption="DMN"/>
+        </documentationLinks>
+    </sample-item>
+</samples-config>

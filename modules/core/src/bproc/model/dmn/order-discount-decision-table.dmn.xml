@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101" namespace="http://www.flowable.org/dmn" name="Order discount decision table">
+  <decision id="order-discount-decision-table" name="Order discount decision table">
+    <decisionTable hitPolicy="UNIQUE">
+      <input label="Order amount">
+        <inputExpression id="input_1" typeRef="number">
+          <text><![CDATA[order.amount]]></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Discount" name="discount" typeRef="number"/>
+      <rule>
+        <inputEntry id="input_1_1">
+          <text><![CDATA[<1000.0]]></text>
+        </inputEntry>
+        <outputEntry id="output_1_1">
+          <text><![CDATA[10]]></text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry id="input_1_2">
+          <text><![CDATA[>1000]]></text>
+        </inputEntry>
+        <outputEntry id="output_1_2">
+          <text><![CDATA[25]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

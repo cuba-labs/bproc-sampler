@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:bproc="http://schemas.haulmont.com/bproc/bpmn" xmlns:flowable="http://flowable.org/bpmn" targetNamespace="http://www.flowable.org/processdef">
+  <process id="failed-job" name="Failed job" isExecutable="true" flowable:candidateStarterGroups="all-users" bproc:candidateStarterGroupsValue="all-users">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <bproc:formData type="input-dialog" openMode="DIALOG">
+          <bproc:formFields>
+            <bproc:formField id="fail" caption="Fail" type="boolean" editable="true" required="false" />
+          </bproc:formFields>
+        </bproc:formData>
+      </extensionElements>
+      <outgoing>SequenceFlow_1tvx1f4</outgoing>
+    </startEvent>
+    <sequenceFlow id="SequenceFlow_1tvx1f4" sourceRef="startEvent1" targetRef="Task_0einvg0" />
+    <serviceTask id="Task_0einvg0" name="Service that may fail" flowable:async="true" flowable:expression="${bps_FailedJobDemoService.methodThatFails(fail)}" bproc:taskType="springBean">
+      <extensionElements>
+        <bproc:springBean beanName="bps_FailedJobDemoService" methodName="methodThatFails">
+          <bproc:methodParam name="fail" type="boolean" isVariable="true">fail</bproc:methodParam>
+        </bproc:springBean>
+      </extensionElements>
+      <incoming>SequenceFlow_1tvx1f4</incoming>
+      <outgoing>SequenceFlow_0hrzgjg</outgoing>
+    </serviceTask>
+    <endEvent id="EndEvent_1jn2r2l">
+      <incoming>SequenceFlow_0hrzgjg</incoming>
+    </endEvent>
+    <sequenceFlow id="SequenceFlow_0hrzgjg" sourceRef="Task_0einvg0" targetRef="EndEvent_1jn2r2l" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="failed-job">
+      <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+        <omgdc:Bounds x="150" y="150" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1tvx1f4_di" bpmnElement="SequenceFlow_1tvx1f4">
+        <omgdi:waypoint x="180" y="165" />
+        <omgdi:waypoint x="230" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_15fqpwr_di" bpmnElement="Task_0einvg0">
+        <omgdc:Bounds x="230" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1jn2r2l_di" bpmnElement="EndEvent_1jn2r2l">
+        <omgdc:Bounds x="380" y="147" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0hrzgjg_di" bpmnElement="SequenceFlow_0hrzgjg">
+        <omgdi:waypoint x="330" y="165" />
+        <omgdi:waypoint x="380" y="165" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,12 @@
+<p>The process contains a service task that throws an exception if the <code>fail</code> process variable is true. Three attempts to execute the service task are made.
+    After that the service task job will be moved to the failed jobs queue.</p>
+
+<h2>How to use the sample</h2>
+
+<p>
+    Click the <b>Start process</b> button. In the start process form check the <b>Fail</b> checkbox. After the process
+    is started, you'll see an exception stacktrace in the application log. After the third attempt to execute the
+    service task, open the process instance editor (<b>BProc - Process Instances</b>). In the <b>Failed jobs</b> tab
+    you'll see the failed job. Change the value of the <b>fail</b> process variable to false. Double click on the failed
+    job and in the job editor click the <b>Restore failed job</b> button. After that the service task should be completed successfully.
+</p>

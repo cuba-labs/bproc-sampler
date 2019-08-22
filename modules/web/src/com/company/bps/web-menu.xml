@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-bps" insertBefore="bproc">
+        <item screen="bps_SamplerScreen"/>
+        <item screen="bps_Order.browse"/>
+    </menu>
+</menu-config>
