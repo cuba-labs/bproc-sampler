@@ -8,21 +8,54 @@
           <text><![CDATA[order.amount]]></text>
         </inputExpression>
       </input>
+      <input label="Client status">
+        <inputExpression id="input_2" typeRef="string">
+          <text><![CDATA[clientStatus]]></text>
+        </inputExpression>
+      </input>
       <output id="output_1" label="Discount" name="discount" typeRef="number"/>
       <rule>
         <inputEntry id="input_1_1">
-          <text><![CDATA[<1000.0]]></text>
+          <text><![CDATA[<1000]]></text>
+        </inputEntry>
+        <inputEntry id="input_2_0">
+          <text><![CDATA["silver"]]></text>
         </inputEntry>
         <outputEntry id="output_1_1">
           <text><![CDATA[10]]></text>
         </outputEntry>
       </rule>
       <rule>
+        <inputEntry id="input_1_3">
+          <text><![CDATA[<1000]]></text>
+        </inputEntry>
+        <inputEntry id="input_2_3">
+          <text><![CDATA["gold"]]></text>
+        </inputEntry>
+        <outputEntry id="output_1_3">
+          <text><![CDATA[20]]></text>
+        </outputEntry>
+      </rule>
+      <rule>
         <inputEntry id="input_1_2">
           <text><![CDATA[>1000]]></text>
         </inputEntry>
+        <inputEntry id="input_2_1">
+          <text><![CDATA["silver"]]></text>
+        </inputEntry>
         <outputEntry id="output_1_2">
-          <text><![CDATA[25]]></text>
+          <text><![CDATA[30]]></text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry id="input_1_4">
+          <text><![CDATA[>1000]]></text>
+        </inputEntry>
+        <inputEntry id="input_2_4">
+          <text><![CDATA["gold"]]></text>
+        </inputEntry>
+        <outputEntry id="output_1_4">
+          <text><![CDATA[40]]></text>
         </outputEntry>
       </rule>
     </decisionTable>

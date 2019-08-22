@@ -5,12 +5,16 @@
       <extensionElements>
         <bproc:formData type="input-dialog" openMode="DIALOG">
           <bproc:formFields>
-            <bproc:formField id="order" caption="Order" type="entity" editable="true" required="false">
+            <bproc:formField id="order" caption="Order" type="entity" editable="true" required="true">
               <bproc:formFieldProperty name="uiComponent" value="pickerField" />
               <bproc:formFieldProperty name="entityName" value="bps_Order" />
             </bproc:formField>
-            <bproc:formField id="approver" caption="Approver" type="user" editable="true" required="false">
+            <bproc:formField id="approver" caption="Approver" type="user" editable="true" required="true">
               <bproc:formFieldProperty name="uiComponent" value="lookupField" />
+            </bproc:formField>
+            <bproc:formField id="clientStatus" caption="Client status" type="enum" editable="true" required="true">
+              <bproc:formFieldEnumValue value="silver" caption="Silver" />
+              <bproc:formFieldEnumValue value="gold" caption="Gold" />
             </bproc:formField>
           </bproc:formFields>
         </bproc:formData>
