@@ -7,3 +7,5 @@ The *Application - Sampler* screen is opened by default after you log in to the 
 ## How to Include the BProc Trial Version 
 
 After you've cloned the repository, download the BProc trial archive from the [CUBA marketplace](https://www.cuba-platform.com/marketplace/bproc/) and follow the instructions from the *BETA-VERSION* section of the addon description (extract the repository archive to the `repository` directory). 
+
+![BProc Sampler Overview](/images/bproc-sampler-overview.png)
