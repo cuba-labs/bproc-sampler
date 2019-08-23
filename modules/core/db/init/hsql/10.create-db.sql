@@ -1,5 +1,6 @@
+-- begin BPS_ORDER
 create table BPS_ORDER (
-    ID uuid,
+    ID varchar(36) not null,
     VERSION integer not null,
     CREATE_TS timestamp,
     CREATED_BY varchar(50),
@@ -10,7 +11,10 @@ create table BPS_ORDER (
     --
     NUMBER_ varchar(255),
     DATE_ date,
-    MANAGER_ID uuid,
+    MANAGER_ID varchar(36),
+    STATE varchar(255),
+    AMOUNT decimal(19, 2),
     --
     primary key (ID)
-);
+)^
+-- end BPS_ORDER
