@@ -1,4 +1,4 @@
-# BProc Samples
+# BProc Sampler
 
 The project contains [BProc](https://www.cuba-platform.com/marketplace/bproc/) addon usage examples. There are several processes deployed, that demonstrate different BProc addon features. 
 
