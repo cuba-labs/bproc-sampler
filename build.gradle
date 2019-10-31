@@ -3,9 +3,6 @@ buildscript {
     repositories {
         mavenLocal()
         maven {
-            url './repository'
-        }
-        maven {
             url 'https://dl.bintray.com/cuba-platform/main'
         }
         
