@@ -30,7 +30,7 @@ To install the trial version of BProc add-on:
  ```
 maven {
     url './repository'
-    }
+}
 ```
  ![buildscript](images/buildscript.png)
 
