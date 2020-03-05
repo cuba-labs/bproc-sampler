@@ -2,12 +2,12 @@
 -- Users groups
 
 insert into BPROC_USER_GROUP
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, DESCRIPTION, TYPE_)
-values ('51382ce2-2d3b-7c1e-adc0-8d51c0d3e959', 1, '2019-07-03 19:10:16', 'admin', '2019-07-03 19:10:16', null, null, null, 'All Users', null, 'a');
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, CODE, DESCRIPTION, TYPE_)
+values ('51382ce2-2d3b-7c1e-adc0-8d51c0d3e959', 1, '2019-07-03 19:10:16', 'admin', '2019-07-03 19:10:16', null, null, null, 'All Users', 'all-users', null, 'a');
 
 insert into BPROC_USER_GROUP
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, DESCRIPTION, TYPE_)
-values ('0d260bbc-e7d0-5286-439a-11da7b6e71ef', 1, '2019-07-04 14:17:17', 'admin', '2019-07-04 14:17:17', null, null, null, 'Reviewers', null, 'u');
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, CODE, DESCRIPTION, TYPE_)
+values ('0d260bbc-e7d0-5286-439a-11da7b6e71ef', 1, '2019-07-04 14:17:17', 'admin', '2019-07-04 14:17:17', null, null, null, 'Reviewers', 'reviewers', null, 'u');
 
 -- Scheduled tasks
 
